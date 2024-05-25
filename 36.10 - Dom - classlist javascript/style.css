@@ -1,0 +1,18 @@
+body {
+  font-size: 36px;
+}
+
+.myClass {
+  color: blue;
+  font-size: 18px;
+}
+
+.newClass {
+  background-color: yellow;
+  color: red;
+  font-style: italic;
+}
+
+.abc{
+    color: green;
+}

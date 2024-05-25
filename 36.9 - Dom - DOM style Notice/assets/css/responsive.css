@@ -1,0 +1,340 @@
+/* PC */
+@media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+/* Tablet & mobile */
+@media (max-width: 991.98px) {
+  /* 1. ẩn navbar trên tablet và mobile */
+  .navbar {
+    display: none;
+  }
+  /* 2. chuyển logo vào giữa */
+  .header-top {
+    position: relative;
+  }
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  /*3. căn lại vị trí của menu icon */
+  .menu-header__icon {
+    position: absolute;
+    top: 38px;
+    left: 26px;
+    color: #fff;
+    width: 24px;
+  }
+
+  /* 4. overlay */
+  .menu-overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.3);
+    inset: 0;
+    z-index: 1;
+    /* bình thường ẩn overlay đi */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  /* 5. kiểm tra nếu checkbox được check thì hiện overlay */
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* 6. code cho menu drawer */
+  .menu-drawer {
+    position: fixed;
+    background-color: #2e1919;
+    inset: 0 40% 0 0;
+    z-index: 2;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    padding: 60px;
+  }
+  /* 7. kiểm tra nếu checkbox được check hiện menu */
+  .menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+  /* 8. menu top */
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar__list {
+    margin-top: 25px;
+    flex-direction: column;
+  }
+
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .navbar__link:hover {
+    background-color: #00ffff37;
+  }
+
+  /* khoi hero */
+  .hero {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .hero__content {
+    order: 2;
+  }
+
+  .hero__media {
+    order: 1;
+  }
+
+  .hero__content {
+    width: 80%;
+    text-align: center;
+    margin: 22px auto;
+  }
+
+  .hero__row {
+    justify-content: center;
+  }
+
+  /* khối service */
+  .service__row {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .service__img {
+    width: 100%;
+  }
+
+  .service__list {
+    text-align: center;
+  }
+
+  .service-item {
+    width: 90%;
+    text-align: start;
+  }
+
+  /* work list */
+  .work__list {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  /* about */
+  .about-row {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .about__media {
+    width: 100%;
+  }
+
+  /* ẩn ảnh small */
+  .about__img--small {
+    display: none;
+  }
+
+  .about__img--big {
+    width: 100%;
+    border-radius: 15px;
+    margin: 25px auto;
+  }
+
+  .about-content {
+    width: 90%;
+    text-align: center;
+  }
+
+  /* team list */
+  .team__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
+
+  .team-item__thumb {
+    margin: 0 auto;
+  }
+
+  /* install */
+  .install__img {
+    display: none;
+  }
+
+  .install__content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* blog */
+  .blog__inner {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .blog__list {
+    order: 1;
+  }
+
+  .blog__content {
+    order: 2;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog__heading {
+    max-width: 90%;
+  }
+}
+
+/* Tablet  */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* footer */
+  .footer-hidden-tablet {
+    display: none;
+  }
+
+  .footer__top {
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+  }
+
+  .show-on-mobile {
+    display: none;
+  }
+}
+
+/* mobile */
+@media (max-width: 767.98px) {
+  .header__action {
+    display: none;
+  }
+
+  .menu-header__icon {
+    top: 16px;
+  }
+
+  .menu-drawer {
+    inset: 0 20% 0 0;
+    padding: 40px;
+  }
+
+  .navbar__item {
+    list-style-type: none;
+  }
+
+  /* thêm vạch kẻ ngăn cta group */
+  .separate {
+    border-top: 1.5px solid #8c8b8b;
+    margin-top: 10px;
+  }
+  /* hero */
+  .hero__img-small {
+    display: none;
+  }
+
+  .hero__img-large {
+    width: 100%;
+    height: auto;
+  }
+  .hero__heading {
+    font-size: 3rem;
+  }
+  .hero__row {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  /* service */
+  .service {
+    padding: 70px 0;
+  }
+
+  .service__desc {
+    width: 93%;
+  }
+
+  .service__img {
+    height: auto;
+  }
+
+  /* work */
+  .work__desc {
+    width: 100%;
+  }
+
+  .work-item {
+    padding: 20px;
+  }
+
+  /* about */
+  .about {
+    margin-top: 20px;
+    padding: 40px 0;
+  }
+
+  .section-heading {
+    font-size: 3rem;
+  }
+
+  /* team */
+  .team__list {
+    grid-template-columns: 1fr;
+  }
+
+  /* install */
+  .install__inner {
+    margin: 40px 0;
+    padding: 0 8px;
+  }
+
+  .install__content {
+    min-width: 250px;
+  }
+
+  .install__desc {
+    font-size: 1.3rem;
+  }
+
+  .blog__list {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .blog__heading {
+    text-align: center;
+  }
+
+  .appointment__inner {
+    padding: 30px 5px;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .footer__copyright {
+    margin-top: 20px;
+  }
+}
