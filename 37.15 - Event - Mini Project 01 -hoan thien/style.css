@@ -1,0 +1,67 @@
+/* bài lý thuyết liên quan được note dưới đây là thuộc series html, 
+css tại http://web.tuhoc.cc */
+
+* {
+  box-sizing: border-box;
+  /*box-sizing ôn lại bài 47. http://web.tuhoc.cc */
+}
+
+h1 {
+  text-align: center;
+  background-color: aqua;
+  color: blue;
+  border-radius: 50px;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+}
+
+.panel {
+  height: 80vh;
+  background-size: cover; /*(bài 71)*/
+  background-position: center; /*(bài 72)*/
+  background-repeat: no-repeat;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 1; /* (bài 89.1 89.10) - cú pháp viết tắt 89.9 */
+  margin: 10px;
+  position: relative; /* (bài 87.1 87.2) */
+  transition: flex 0.7s; /* (bài 97.1) */
+}
+
+/* combinator selector: space bài 30 */
+.panel h3 {
+  font-size: 24px;
+  margin: 0;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.434);
+  padding: 2px 20px;
+  border-radius: 15px   ;
+}
+
+.panel.active {
+  flex: 10;
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 1s 0.7s;
+}
+
+/* Ẩn bớt phần tử khi màn hình nhỏ */
+/* responsive bài 96.2 */
+@media (max-width: 720px) {
+  /* bài 37 series web type selector */
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}

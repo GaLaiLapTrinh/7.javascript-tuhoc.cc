@@ -1,0 +1,18 @@
+/* set màu nền cho khối div grandparent */
+div {
+  border: red 2px solid;
+}
+#grandparent {
+  width: 90vw;
+  background-color: #f1f1f1;
+}
+
+#parent {
+  width: 70vw;
+  background-color: cyan;
+}
+
+#child {
+  width: 50vw;
+  background-color: yellow;
+}
