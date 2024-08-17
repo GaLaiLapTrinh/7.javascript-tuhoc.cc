@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  background-color: aqua;
+  color: blue;
+  max-width: 80vw;
+  border-radius: 50px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+body {
+  background-image: linear-gradient(90deg, #8067f1, #6d56d2);
+}
+.parent {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: purple;
+  border-radius: 10px;
+  border: 1px solid purple;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  animation: scale 0.5s ease-out;
+  /* animation và các thư viện 98.1 - 98.5 http://web.tuhoc.cc */
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}

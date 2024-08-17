@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  background-color: aqua;
+  color: blue;
+  max-width: 80vw;
+  border-radius: 50px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+body {
+  background-image: linear-gradient(90deg, #8067f1, #6d56d2);
+}
+
+.search-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  position: relative;
+  height: 50px;
+}
+
+.search .input {
+  border-radius: 18px;
+  border: 0;
+  background-color: #fff;
+  font-size: 18px;
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+  transition: 0.7s;
+}
+
+.btn {
+  background-color: #fff;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 24px;
+}
+
+.search.active .input {
+  width: 350px;
+  padding-left: 55px;
+}
+
+.btn:focus,
+input:focus {
+  outline: none;
+}
+
+.fa-magnifying-glass {
+  color: #ccc;
+  transition: 0.7s;
+}
+
+.search.active .fa-magnifying-glass {
+  color: #6d56d2;
+}
